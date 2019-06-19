@@ -1,8 +1,10 @@
 package main
 import ("fmt")
-func square(n int) {
+func square (n int) int {
     var a int
     a = n * n 
-    return a
+    return a;
 }
-fmt.Println(square(5))
+func main() {
+fmt.Println (square(5))
+}
