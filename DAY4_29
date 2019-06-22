@@ -1,0 +1,12 @@
+def calculate(distance,no_of_passengers):
+    no_of_litres=distance/10
+    fuel_price=70*no_of_litres
+    ticket_price=no_of_passengers*80
+    if fuel_price<ticket_price :
+        profit=ticket_price - fuel_price
+        return profit
+    else :
+        return -1
+distance=20
+no_of_passengers=50
+print(calculate(distance,no_of_passengers))
