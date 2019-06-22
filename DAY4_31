@@ -1,0 +1,21 @@
+def check_palindrome(word):
+     a=0
+     l=len(word)-1
+     f=0      
+     while a<(l/2):
+         if word[a]==word[l]:
+             a=a+1 
+             l=l-1
+         else:
+             f=1 
+             break
+         if f==1:
+             return False
+         else:
+             return True
+        
+status=check_palindrome("wow")
+if(status):
+    print("word is palindrome")
+else:
+    print("word is not palindrome")
