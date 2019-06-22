@@ -1,0 +1,22 @@
+def encode(message):
+ c=0
+ a=0
+ l=len(message)-1
+ res=[]
+ while a<l:
+  if message[a]==message[a+1]:
+   c=c+1
+   a=a+1
+  else:
+     c=c+1
+     res.append(c)
+     res.append(message[a])
+     c=0
+     a=a+1
+ c=c+1    
+ res.append(c)
+ res.append(message[a])    
+ for index in range(len(res)):
+     print(res[index],end="")
+     
+encoded_message=encode("ABBBBCCCCCCCCAB")
