@@ -1,0 +1,26 @@
+def find_winner_of_the_day(*match_tuple):
+    for x in match_tuple:
+        if x=="Team1":
+            winner="Team1"
+            
+        else:
+            winner="Team2"
+            
+        print("Winner of the match is:",winner)
+        
+    a=match_tuple.count("Team1")
+    b=match_tuple.count("Team2")
+    c=len(match_tuple)
+    print("No of wins of Team1:",a)
+    print("No of wins of Team2:",b)
+    if a>(c/2):
+        print("Winner of the day is Team1")
+    elif b>(c/2):
+        print("Winner of the day is:Team2")
+    else:
+        print("Tie")
+    
+        
+#print(find_winner_of_the_day("Team1","Team2","Team1"))
+print(find_winner_of_the_day("Team1","Team1","Team2","Team1","Team2"))
+
