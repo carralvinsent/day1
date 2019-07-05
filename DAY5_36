@@ -1,0 +1,17 @@
+def create_largest_number(number_list):
+    largestno=''
+    for i in range(len(number_list)):
+        temp=0
+        for j in range(i+1,len(number_list)):
+            if number_list[i]<number_list[j]:
+                temp=number_list[i]
+                number_list[i]=number_list[j]
+                number_list[j]=temp
+    new_number_list=number_list
+    for element in number_list:
+        largestno+=str(element)
+    return largestno
+        
+number_list=[23,34,55]
+largest_number=create_largest_number(number_list)
+print(largest_number)
