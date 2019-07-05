@@ -8,7 +8,7 @@ def create_largest_number(number_list):
                 number_list[i]=number_list[j]
                 number_list[j]=temp
     new_number_list=number_list
-    for element in number_list:
+    for element in new_number_list:
         largestno+=str(element)
     return largestno
         
