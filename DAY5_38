@@ -1,0 +1,22 @@
+def check_double(number):
+    list=[]
+    alist=[]
+    f=0
+    double=2*number
+    print(double)
+    while number>0:
+            a=number%10
+            list.append(a)
+            number=number//10
+    while double>0:
+        b=double%10
+        alist.append(b)
+        double=double//10
+        if b in list and len(list)==len(alist):
+            f=1
+            break
+    if f==1:
+       return True
+    else:
+       return False
+print(check_double(125874))
