@@ -1,1 +1,17 @@
+def translate(bilingual_dict,english_words_list):
+    swedish_words_list=[]
+    for key,value in bilingual_dict.items():
+        for i in range(len(english_words_list)):
+            if english_words_list[i] in key:
+                swedish_words_list.append(bilingual_dict[english_words_list[i]])
 
+    return swedish_words_list
+
+
+bilingual_dict={'give': 'ge', 'amount': 'god', 'please': 'snalla du', 'happy': 'gott', 'the': 'de', 'year': 'ar'}	
+english_words_list=['please', 'give', 'the', 'amount']
+print("The bilingual dict is:",bilingual_dict)
+print("The english words are:",english_words_list)
+
+swedish_words_list=translate(bilingual_dict, english_words_list)
+print("The equivalent swedish words are:",swedish_words_list)
