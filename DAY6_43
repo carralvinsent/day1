@@ -1,0 +1,13 @@
+def find_smallest_number(num):
+    for val in range(1,1000):
+        list=[]
+        for j in range(1,(val+1)):
+            if val%j==0:
+                list.append(j)
+        if len(list)==num:
+            return val
+
+num=16
+print("The number of divisors :",num)
+result=find_smallest_number(num)
+print("The smallest number having",num," divisors:",result)
