@@ -1,0 +1,13 @@
+import math
+def find_number_of_combination(number_of_flavours):
+    total_combination=0
+    for i in range(0,number_of_flavours+1):
+        a=math.factorial(number_of_flavours)
+        b=math.factorial(number_of_flavours-i)
+        c=math.factorial(i)
+        total_combination+=a/(b*c)
+    
+    return total_combination
+
+number_of_combination=find_number_of_combination(4)
+print(number_of_combination)
