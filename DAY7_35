@@ -1,0 +1,22 @@
+def count_names(name_list):
+    count1=0
+    count2=0
+    for i in range(len(name_list)):
+        if "at" in name_list[i]:
+              if len(name_list[i])>=2:
+                  count2+=1 
+              c=count2
+              if len(name_list[i])==3:
+                  if name_list[i].find("a")==1 and name_list[i].find("t")==2:
+                     count1+=1 
+              d=count1
+        else:
+            print("error")
+    
+    print("_at == ",c)
+    print("%at% == ",d)
+        
+            
+    
+name_list=['Rock', 'sandra']
+count_names(name_list)
