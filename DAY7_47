@@ -1,7 +1,5 @@
 def encrypt_sentence(sentence):
     list=[]
-    vowels=[]
-    consonents=[]
     set={"a","e","i","o","u","A","E","I","O","U"}
     word=sentence.split(" ")
     print(word)
@@ -9,6 +7,8 @@ def encrypt_sentence(sentence):
         if i%2==0:
             list.append(word[i][::-1])
         else:
+            vowels=[]
+            consonents=[]
             for char in word[i]:
                 if char in set:
                     vowels.append(char)
