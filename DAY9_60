@@ -1,0 +1,8 @@
+def remove_duplicates(value):
+    str=""
+    for char in value:
+        if char not in str:
+            str+=char
+    return str
+
+print(remove_duplicates("11223445566666ababzzz@@@123#*#*"))
