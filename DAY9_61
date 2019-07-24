@@ -1,0 +1,70 @@
+import re
+def validate_name(name):
+    if (name!=""):
+        if name.isalpha()==True:
+            count=0
+            for char in name:
+                count=count+1 
+            if count<=15:
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+
+def validate_phone_no(phno):
+    if (phno.isdigit()==True):
+        count=0
+        for dig in phno:
+            count=count+1
+        if count==10:
+           list=[]
+           for dig in phno:
+               list.append(dig)
+           for j in range(1,len(list)):
+               if list[0]==list[j]:
+                   if list[0]==list[len(list)-1]:
+                       return False
+               else:
+                   return True
+        else: 
+           return False
+    else:
+        return False
+                
+                
+
+def validate_email_id(email_id):
+    
+    if((re.search(r"@",email_id)!=None) and (re.search(r".com",email_id))):
+        if (email_id.count("@")==1 and email_id.count(".com")==1):
+            if (email_id.endswith(".com")==True):
+                if(re.search(r"yahoo|gmail|hotmail",email_id)!=None):
+                  return True
+                else:
+                  return False
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+        
+
+def validate_all(name,phone_no,email_id):
+    a=validate_name(name)
+    if a==False:
+        print("Invalid Name")
+    b=validate_phone_no(phone_no)
+    if b==False:
+        print("Invalid phone number")
+    c=validate_email_id(email_id)
+    if c==False:
+        print("Invalid email id")
+    if (a==True and b==True and c==True):
+        print("All the details are valid")
+
+
+validate_all("Tom", "9999999999", "tom.com@gmail.com")
